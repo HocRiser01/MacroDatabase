@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		07A7901E27FBDF5100457DFC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A7901D27FBDF5100457DFC /* main.cpp */; };
+		07A7902F27FBDFA100457DFC /* leafnode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A7902427FBDFA000457DFC /* leafnode.cpp */; };
+		07A7903027FBDFA100457DFC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A7902527FBDFA000457DFC /* main.cpp */; };
+		07A7903127FBDFA100457DFC /* internode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A7902627FBDFA000457DFC /* internode.cpp */; };
+		07A7903227FBDFA100457DFC /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A7902827FBDFA100457DFC /* node.cpp */; };
+		07A7903327FBDFA100457DFC /* structure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A7902927FBDFA100457DFC /* structure.cpp */; };
+		07A7903427FBDFA100457DFC /* b_plus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A7902E27FBDFA100457DFC /* b_plus.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,17 @@
 /* Begin PBXFileReference section */
 		07A7901A27FBDF5100457DFC /* mini_DB */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mini_DB; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A7901D27FBDF5100457DFC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		07A7902427FBDFA000457DFC /* leafnode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leafnode.cpp; sourceTree = "<group>"; };
+		07A7902527FBDFA000457DFC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		07A7902627FBDFA000457DFC /* internode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = internode.cpp; sourceTree = "<group>"; };
+		07A7902727FBDFA000457DFC /* B_plus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B_plus.h; sourceTree = "<group>"; };
+		07A7902827FBDFA100457DFC /* node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = node.cpp; sourceTree = "<group>"; };
+		07A7902927FBDFA100457DFC /* structure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = structure.cpp; sourceTree = "<group>"; };
+		07A7902A27FBDFA100457DFC /* Structure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Structure.h; sourceTree = "<group>"; };
+		07A7902B27FBDFA100457DFC /* LeafNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeafNode.h; sourceTree = "<group>"; };
+		07A7902C27FBDFA100457DFC /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		07A7902D27FBDFA100457DFC /* InterNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterNode.h; sourceTree = "<group>"; };
+		07A7902E27FBDFA100457DFC /* b_plus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b_plus.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +74,17 @@
 		07A7901C27FBDF5100457DFC /* mini_DB */ = {
 			isa = PBXGroup;
 			children = (
+				07A7902E27FBDFA100457DFC /* b_plus.cpp */,
+				07A7902727FBDFA000457DFC /* B_plus.h */,
+				07A7902627FBDFA000457DFC /* internode.cpp */,
+				07A7902D27FBDFA100457DFC /* InterNode.h */,
+				07A7902427FBDFA000457DFC /* leafnode.cpp */,
+				07A7902B27FBDFA100457DFC /* LeafNode.h */,
+				07A7902527FBDFA000457DFC /* main.cpp */,
+				07A7902827FBDFA100457DFC /* node.cpp */,
+				07A7902C27FBDFA100457DFC /* Node.h */,
+				07A7902927FBDFA100457DFC /* structure.cpp */,
+				07A7902A27FBDFA100457DFC /* Structure.h */,
 				07A7901D27FBDF5100457DFC /* main.cpp */,
 			);
 			path = mini_DB;
@@ -119,6 +147,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A7901E27FBDF5100457DFC /* main.cpp in Sources */,
+				07A7902F27FBDFA100457DFC /* leafnode.cpp in Sources */,
+				07A7903127FBDFA100457DFC /* internode.cpp in Sources */,
+				07A7903427FBDFA100457DFC /* b_plus.cpp in Sources */,
+				07A7903227FBDFA100457DFC /* node.cpp in Sources */,
+				07A7903027FBDFA100457DFC /* main.cpp in Sources */,
+				07A7903327FBDFA100457DFC /* structure.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
