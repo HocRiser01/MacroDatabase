@@ -1,6 +1,6 @@
+#include<iostream>
 #include"Node.h"
 #include"InterNode.h"
-#include<iostream>
 using namespace std;
 
 Node::Node()
@@ -24,12 +24,12 @@ Node* Node::GetBrother(int& flag)
         {
             if (i == Parent->count)
             {
-                p = Parent->Child[i - 1];//×óÐÖµÜ flag=1
+                p = Parent->Child[i - 1];
                 flag = 1;
             }
             else
             {
-                p = Parent->Child[i + 1];//ÓÒÐÖµÜ flag=2
+                p = Parent->Child[i + 1];
                 flag = 2;
             }
         }

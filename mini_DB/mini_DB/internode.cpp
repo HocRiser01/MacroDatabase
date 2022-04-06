@@ -16,15 +16,13 @@ Inter_Node::~Inter_Node()
 bool Inter_Node::Insert(structure value, Node* New)
 {
     int i = 0;
-    for (; (i < count) && (value.larger_than_second(key[i],type_of_key)); i++)//i指向key要插入的位置
-    {
-    }
-    for (int j = count; j > i; j--)//挪动倒地方
+    for (; (i < count) && (value.larger_than_second(key[i],type_of_key)); i++);
+    for (int j = count; j > i; j--)
         key[j] = key[j - 1];
-    for (int j = count + 1; j > i + 1; j--)//父亲key值改变，孩子移动；
+    for (int j = count + 1; j > i + 1; j--)
         Child[j] = Child[j - 1];
-    key[i] = value;//关键字传到父亲节点
-    Child[i + 1] = New;//newnode放到该放的位置
+    key[i] = value;
+    Child[i + 1] = New;
     New->Parent = this;
     count++;
     return true;
@@ -51,27 +49,27 @@ bool Inter_Node::Delete(structure k)
 structure Inter_Node::Split(Inter_Node* p, structure k)
 {
     int i = 0, j = 0;
-    if ((k.larger_than_second(this->key[M - 1], type_of_key)) && (k.smaller_than_second(this->key[M], type_of_key)))//分裂的地方在中间
+    if ((k.larger_than_second(this->key[M - 1], type_of_key)) && (k.smaller_than_second(this->key[M], type_of_key)))
     {
         for (i = M; i < M * 2; i++, j++)
-            p->key[j] = this->key[i];//拷贝后面值进brother
+            p->key[j] = this->key[i];
         j = 1;
         for (i = M + 1; i <= M * 2; i++, j++)
         {
-            this->Child[i]->Parent = p;//孩子跟着往后移动
+            this->Child[i]->Parent = p;
             p->Child[j] = this->Child[i];
         }
-        this->count = M;//关键子数量各位一半
+        this->count = M;
         p->count = M;
         return k;
     }
-    int pos = k.smaller_than_second(this->key[M - 1],type_of_key) ? (M - 1) : M;//看k大小和中间-1比较，定位在前面还是在后面节点
-    k = this->key[pos];//pos为分裂点,定位为前还是后分裂点,最后肯定为中间值
+    int pos = k.smaller_than_second(this->key[M - 1],type_of_key) ? (M - 1) : M;
+    k = this->key[pos];
     j = 0;
-    for (i = pos + 1; i < M * 2; i++, j++)//前节点考后节点,从插入的位置分，插入以后的放到新节点
+    for (i = pos + 1; i < M * 2; i++, j++)
         p->key[j] = this->key[i];
     j = 0;
-    for (i = pos + 1; i <= M * 2; i++, j++)//将孩子送给兄弟
+    for (i = pos + 1; i <= M * 2; i++, j++)
     {
         this->Child[i]->Parent = p;
         p->Child[j] = this->Child[i];

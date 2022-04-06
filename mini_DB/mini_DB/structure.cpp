@@ -1,5 +1,5 @@
-#include"Structure.h"
 #include<iostream>
+#include"Structure.h"
 using namespace std;
 
 datachunk* data_insert(datachunk* list, datachunk& input) {
@@ -7,7 +7,7 @@ datachunk* data_insert(datachunk* list, datachunk& input) {
 	if (list == nullptr) {
 		//cout << "null" << endl;
 		list = new datachunk;
-		list->a = input.a;
+        *list = input;
 		list->next = nullptr;
 		return list;
 	}
@@ -16,7 +16,7 @@ datachunk* data_insert(datachunk* list, datachunk& input) {
 	}
 	datachunk* second_node = new datachunk;
 	first_node->next = second_node;
-	second_node->a = input.a;
+    *second_node = input;
 	second_node->next = nullptr;
 	return list;
 }
@@ -118,6 +118,7 @@ bool structure::larger_than_second(structure second, int type) {
 		}
 		return false;
 	}
+    return false;
 }
 
 bool structure::smaller_than_second(structure second, int type) {
@@ -145,6 +146,7 @@ bool structure::smaller_than_second(structure second, int type) {
 		}
 		return false;
 	}
+    return false;
 }
 
 bool structure::same_to_second(structure second, int type) {
@@ -172,6 +174,7 @@ bool structure::same_to_second(structure second, int type) {
 		}
 		return true;
 	}
+    return false;
 }
 
 void structure::clear() {

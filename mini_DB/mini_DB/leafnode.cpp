@@ -13,12 +13,12 @@ Leaf_Node::~Leaf_Node(){
 bool Leaf_Node::Insert(structure value)
 {
     int i = 0;
-    for (; (value.larger_than_second(key[i],type_of_key)) && (i < count); i++)//按顺序
+    for (; (value.larger_than_second(key[i],type_of_key)) && (i < count); i++)
     {
     }
-    for (int j = count; j > i; j--)//移动，找到应该插入的关键字位置
+    for (int j = count; j > i; j--)
         key[j] = key[j - 1];
-    key[i] = value;//插入关键字
+    key[i] = value;
     count++;
     return true;
 }
@@ -48,8 +48,8 @@ bool Leaf_Node::Delete(structure value)
 structure Leaf_Node::Split(Leaf_Node* p)
 {
     int j = 0;
-    for (int i = M; i < M * 2; i++, j++)//把值copy到新节点
-        p->key[j] = this->key[i];//this为old node
+    for (int i = M; i < M * 2; i++, j++)
+        p->key[j] = this->key[i];
     this->count = this->count - j;
     p->count = j;
     return p->key[0];
@@ -57,9 +57,9 @@ structure Leaf_Node::Split(Leaf_Node* p)
 
 bool Leaf_Node::Merge(Leaf_Node* p)
 {
-    if (this->count + p->count > M * 2)//如果加在一起格满说明不需要合并
+    if (this->count + p->count > M * 2)
         return false;
-    for (int i = 0; i < p->count; i++)//否则将oldnode的关键字都插入到bro里
+    for (int i = 0; i < p->count; i++)
         this->Insert(p->key[i]);
     return true;
 }
