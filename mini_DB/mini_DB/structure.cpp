@@ -2,6 +2,15 @@
 #include"Structure.h"
 using namespace std;
 
+datachunk::datachunk(){
+    valid = 0;
+    nI = nD = nS = 0;
+    memset(Int, 0, sizeof(Int));
+    memset(Double, 0, sizeof(Double));
+    memset(String, 0, sizeof(String));
+    next = nullptr;
+}
+
 datachunk* data_insert(datachunk* list, datachunk& input) {
 	datachunk* first_node = list;
 	if (list == nullptr) {
@@ -84,6 +93,13 @@ datachunk* datachunk_search(datachunk_manager* list, int number) {
 	}
 }
 
+structure::structure(){
+    pposition = nullptr;
+    line1 = 0;
+    line2 = 0;
+    memset(line3, 0 , sizeof(line3));
+}
+
 void structure::operator = (structure second) {
 	this->pposition = second.pposition;
 	this->line1 = second.line1;
@@ -115,6 +131,9 @@ bool structure::larger_than_second(structure second, int type) {
 			if (line3[i] > second.line3[i]) {
 				return true;
 			}
+            if (line3[i] < second.line3[i]){
+                return false;
+            }
 		}
 		return false;
 	}
@@ -143,6 +162,9 @@ bool structure::smaller_than_second(structure second, int type) {
 			if (line3[i] < second.line3[i]) {
 				return true;
 			}
+            if (line3[i] > second.line3[i]){
+                return false;
+            }
 		}
 		return false;
 	}

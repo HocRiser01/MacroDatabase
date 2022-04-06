@@ -56,7 +56,9 @@ bool Bplus::Insert(structure data,datachunk* data_point)
         mid_list = datachunk_insert(mid_list, data_point);
         return true;
     }
-
+    data.pposition = new datachunk_manager;
+    data.pposition->position = data_point;
+    data.pposition->next = nullptr;
     Leaf_Node* Old_Node = Find(data);
 
     if (Old_Node == nullptr)

@@ -61,7 +61,7 @@ void Deletekey(){
                 s = s->next;
             }
             if (!cnt) cout << "No eligible members" << endl;
-            else cout << cnt << "members deleted" << endl;
+            else cout << cnt << " members deleted" << endl;
         }
     }else if (ttype == '2'){
         double key;
@@ -81,7 +81,7 @@ void Deletekey(){
                 s = s->next;
             }
             if (!cnt) cout << "No eligible members" << endl;
-            else cout << cnt << "members deleted" << endl;
+            else cout << cnt << " members deleted" << endl;
         }
     }else if (ttype == '3'){
         char key[10];
@@ -101,7 +101,7 @@ void Deletekey(){
                 s = s->next;
             }
             if (!cnt) cout << "No eligible members" << endl;
-            else cout << cnt << "members deleted" << endl;
+            else cout << cnt << " members deleted" << endl;
         }
     }
 }

@@ -29,7 +29,7 @@ int main() {
         char ch;
         ch = getchar();
         while (1){
-            scanf("%c", &ch);
+            ch = getchar();
             if (ch == '\n') break;
             if (ch == ' ') continue;
             if (ch < '1' || ch > '3'){

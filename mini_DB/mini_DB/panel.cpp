@@ -52,25 +52,27 @@ void Panel(){
                 structure mainkey;
                 strcpy(mainkey.line3, key);
                 for (datachunk_manager *s = tree.Search(mainkey); s; s = s -> next){
+                    if (!s -> position -> valid){
                         Print(* s->position);
                         ++ cnt;
+                    }
                 }
             }
             if (!cnt) cout << "No eligible members" << endl;
-            else cout << cnt << "members found" << endl;
+            else cout << cnt << " members found" << endl;
         }else if (!strcmp(Opt, "quit")){
             cout << "Goodbye!" << endl;
             break;
         }else if (!strcmp(Opt, "help")){
             ShowHelp(); cls();
             cout << "Please enter your operation" << endl;
-        }else if (!strcmp(Opt, "head")){
-            int cnt = 0;
-            for (datachunk *s = d_list; s && cnt < 10; s = s -> next)
-                if (!s -> valid){
-                    ++ cnt;
-                    Print(*s);
-                }
+//        }else if (!strcmp(Opt, "head")){
+//            int cnt = 0;
+//            for (datachunk *s = d_list; s && cnt < 10; s = s -> next)
+//                if (!s -> valid){
+//                    ++ cnt;
+//                    Print(*s);
+//                }
         }else if (!strcmp(Opt, "size")){
             cout << "There are " << size << " rows in the database now" << endl;
         }
