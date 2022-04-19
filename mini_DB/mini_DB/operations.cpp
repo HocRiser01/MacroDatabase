@@ -16,11 +16,11 @@ void Insertrow(){
             cin >> Tmp.Double[Tmp.nD ++];
             if (j < column) getchar();
         }else if (Type[j] == '3'){
-            ++ Tmp.nS;
             int len = 0;
-            while ((ch = getchar()) != ',' && ch != ' ')
+            while ((ch = getchar()) != ',' && ch != ' ' && ch != '\n')
                 Tmp.String[Tmp.nS][len ++] = ch;
             Tmp.String[Tmp.nS][len] = 0;
+            ++ Tmp.nS;
         }
         if (j == key){
             tn = (Type[j] == '1') ? Tmp.nI - 1 : (Type[j] == '2') ? Tmp.nD - 1 : Tmp.nS - 1;
@@ -45,7 +45,7 @@ void Insertrow(){
 //        cout << mainkey.line2 << endl;
     }else if (ttype == '3'){
         strcpy(mainkey.line3, Tmp.String[tn]);
-//        cout << mainkey.line3 << endl;
+//        cout << Tmp.String[tn] << endl;
     }
     tree.Insert(mainkey, my_list[size]);
 }
