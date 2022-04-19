@@ -18,7 +18,7 @@
 		07ADD71327FC9022005F83AD /* operations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07ADD71227FC9022005F83AD /* operations.cpp */; };
 		07ADD71527FC9038005F83AD /* output.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07ADD71427FC9038005F83AD /* output.cpp */; };
 		07ADD71727FC934E005F83AD /* panel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07ADD71627FC934E005F83AD /* panel.cpp */; };
-		07ADD71A27FC9CB5005F83AD /* Shared.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07ADD71927FC9CB5005F83AD /* Shared.cpp */; };
+		07BD0ACF280E9556004759B3 /* shared.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07BD0ACE280E9556004759B3 /* shared.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,7 +60,7 @@
 		07ADD71427FC9038005F83AD /* output.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = output.cpp; sourceTree = "<group>"; };
 		07ADD71627FC934E005F83AD /* panel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = panel.cpp; sourceTree = "<group>"; };
 		07ADD71827FC9677005F83AD /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
-		07ADD71927FC9CB5005F83AD /* Shared.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shared.cpp; sourceTree = "<group>"; };
+		07BD0ACE280E9556004759B3 /* shared.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shared.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 				07ADD70C27FC8B7E005F83AD /* Output.h */,
 				07ADD71627FC934E005F83AD /* panel.cpp */,
 				07A7908B27FC798300457DFC /* Panel.h */,
-				07ADD71927FC9CB5005F83AD /* Shared.cpp */,
+				07BD0ACE280E9556004759B3 /* shared.cpp */,
 				07ADD71827FC9677005F83AD /* Shared.h */,
 				07A7908627FC798200457DFC /* structure.cpp */,
 				07A7909427FC798300457DFC /* Structure.h */,
@@ -181,11 +181,11 @@
 			files = (
 				07A7909F27FC798400457DFC /* b_plus.cpp in Sources */,
 				07ADD71727FC934E005F83AD /* panel.cpp in Sources */,
+				07BD0ACF280E9556004759B3 /* shared.cpp in Sources */,
 				07A7909927FC798400457DFC /* internode.cpp in Sources */,
 				07A790A027FC798400457DFC /* node.cpp in Sources */,
 				07A790A227FC798400457DFC /* system.cpp in Sources */,
 				07A7909D27FC798400457DFC /* main.cpp in Sources */,
-				07ADD71A27FC9CB5005F83AD /* Shared.cpp in Sources */,
 				07A7909E27FC798400457DFC /* leafnode.cpp in Sources */,
 				07A7909A27FC798400457DFC /* structure.cpp in Sources */,
 				07ADD71527FC9038005F83AD /* output.cpp in Sources */,

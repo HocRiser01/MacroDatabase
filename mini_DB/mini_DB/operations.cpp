@@ -6,14 +6,22 @@ using namespace std;
 
 void Insertrow(){
     int tn = 0;
+    char ch;
     datachunk Tmp;
     for (int j = 1; j <= column; ++ j){
-        if (Type[j] == '1')
+        if (Type[j] == '1'){
             cin >> Tmp.Int[Tmp.nI ++];
-        else if (Type[j] == '2')
+            if (j < column) getchar();
+        }else if (Type[j] == '2'){
             cin >> Tmp.Double[Tmp.nD ++];
-        else if (Type[j] == '3')
-            cin >> Tmp.String[Tmp.nS ++];
+            if (j < column) getchar();
+        }else if (Type[j] == '3'){
+            ++ Tmp.nS;
+            int len = 0;
+            while ((ch = getchar()) != ',' && ch != ' ')
+                Tmp.String[Tmp.nS][len ++] = ch;
+            Tmp.String[Tmp.nS][len] = 0;
+        }
         if (j == key){
             tn = (Type[j] == '1') ? Tmp.nI - 1 : (Type[j] == '2') ? Tmp.nD - 1 : Tmp.nS - 1;
         }
