@@ -11,16 +11,21 @@ void Insertrow(){
     for (int j = 1; j <= column; ++ j){
         if (Type[j] == '1'){
             cin >> Tmp.Int[Tmp.nI ++];
-            if (j < column) getchar();
+            getchar();
+//            cout << Tmp.Int[Tmp.nI - 1] << endl;
         }else if (Type[j] == '2'){
             cin >> Tmp.Double[Tmp.nD ++];
-            if (j < column) getchar();
+            getchar();
+//            cout << Tmp.Double[Tmp.nD - 1] << endl;
         }else if (Type[j] == '3'){
             int len = 0;
+            while ((ch = getchar()) == ',' || ch == ' ' || ch == '\n');
+            Tmp.String[Tmp.nS][len ++] = ch;
             while ((ch = getchar()) != ',' && ch != ' ' && ch != '\n')
                 Tmp.String[Tmp.nS][len ++] = ch;
             Tmp.String[Tmp.nS][len] = 0;
             ++ Tmp.nS;
+//            cout << Tmp.String[Tmp.nS - 1] << endl;
         }
         if (j == key){
             tn = (Type[j] == '1') ? Tmp.nI - 1 : (Type[j] == '2') ? Tmp.nD - 1 : Tmp.nS - 1;
@@ -39,13 +44,13 @@ void Insertrow(){
     structure mainkey;
     if (ttype == '1'){
         mainkey.line1 = Tmp.Int[tn];
-//        cout << mainkey.line1 << endl;
+        cout << mainkey.line1 << endl;
     }else if (ttype == '2'){
         mainkey.line2 = Tmp.Double[tn];
-//        cout << mainkey.line2 << endl;
+        cout << mainkey.line2 << endl;
     }else if (ttype == '3'){
         strcpy(mainkey.line3, Tmp.String[tn]);
-//        cout << Tmp.String[tn] << endl;
+        cout << mainkey.line3 << endl;
     }
     tree.Insert(mainkey, my_list[size]);
 }
