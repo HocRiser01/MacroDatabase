@@ -1,2 +1,2 @@
-# mini_DB
-吉林大学20级唐计程序设计综合实践作业
+# MiniDatabase
+The underlying API of database system implemented by B+ tree.
